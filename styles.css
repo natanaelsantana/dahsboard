@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: white;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        'sidebar header'
+        'sidebar content';
+}
+
+.header {
+    position: relative;
+    grid-area: header;
+    background-color: white;
+    padding: 1.5rem 3rem;
+    z-index: 3;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.top {
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    margin-bottom: 2.5rem
+}
+
+.sidebar {
+    background-color: rgb(93, 204, 93);
+    grid-area: sidebar;
+    padding: 30px;
+}
+
+.board {
+    display: grid;
+    gap:1.5rem;
+}
+
+.board-item {
+    display: list-item;
+}
+
+.specific {
+    padding-top: 40%;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.main {
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: min-content 1fr;
+    gap: 2rem;
+    grid-template-areas: 
+        'character-box friends'
+        'pet-box trending';
+    overflow: auto;
+}
+
+#character {
+    grid-area: character-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    text-align: center;
+}
+
+.pet-boxes {
+    grid-area: pet-box;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 250px;
+    gap: 2rem;
+    display: grid;
+    padding-bottom: 2rem;
+    
+}
+
+.friends {
+    grid-area: friends;
+}
+
+#friends {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.topic {
+    grid-area: trending;
+}
+
+#topic {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
