@@ -12,7 +12,7 @@
 <body>
     <header class="header">
         <div class="top">
-            <img src="" alt="">
+            <div class="picture"></div>
             <h2 class="nickname">30QM4N</h2>
         </div>
     </header>
@@ -61,30 +61,31 @@
     <div class="main">
         <div id="character">
             <div id="char">
+                <p>Your character</p>
                 <img src="pics/char.png" alt="character">
-                <p>Status</p>
                 <div class="status">
-                    <p>Health :</p>
-                    <p>Mana :</p>
+                    <p>Status</p>
+                    <div class="health-bar">Health</div>
+                    <div class="mana-bar">Mana</div>
                 </div>
             </div>
         </div>
 
         <div class="pet-boxes">
             <div class="pet-box" id="pet-box1">
-                <p>Pinguin</p>
+                <p>Penguin</p>
                 <img src="pics/pet1.jpg" alt="pet 1">
-                <p>Status</p>
                 <div class="status">
-                    <p>health</p>
+                    <p>Status</p>
+                    <div class="health-bar">Health</div>
                 </div>
             </div>
             <div class="pet-box" id="pet-box2">
-                <p>Urso</p>
+                <p>Bear</p>
                 <img src="pics/pet2.jpg" alt="pet 2">
-                <p>status</p>
                 <div class="status">
-                    <p>health</p>
+                    <p>status</p>
+                    <div class="health-bar">Health</div>
                 </div>
             </div>
         </div>
@@ -93,28 +94,61 @@
             <h2>Friends</h2>
             <ul id="friends">
                 <li class="friend-stats">
-                    <p>voidmaster</p>
-                    <p>Online</p>
+                    <div class="picture"></div>
+                    <div class="friend">
+                        <p>Voidmaster</p>
+                        <div class="stats">
+                            <div class="online-indicator">
+                                <span class="blink"></span>
+
+                            </div>
+                            <p>Online</p>
+                        </div>
+                    </div>
                 </li>
                 <li class="friend-stats">
-                    <p>Jack</p>
-                    <p>offline</p>
+                    <div class="picture"></div>
+                    <div class="friend">
+                        <p>Jack</p>
+                        <div class="stats">
+                            <div class="offline-indicator">
+                                <span class="blink"></span>
+                            </div>
+                            <p>offline</p>
+                        </div>
                 </li>
                 <li class="friend-stats">
-                    <p>Joe</p>
-                    <p>Online</p>
+                    <div class="picture"></div>
+                    <div class="friend">
+                        <p>Joe</p>
+                        <div class="stats">
+                            <div class="online-indicator">
+                                <span class="blink"></span>
+                            </div>
+                            <p>Online</p>
+                        </div>
                 </li>
             </ul>
-            <div class="topic">
-                <h2>Trend topics</h2>
-                <ul id="topic">
-                    <p>lorem</p>
-                    <p>lorem</p>
-                    <p>lorem</p>
-                </ul>
-            </div>
         </div>
-    </div>
+        <div class="topic">
+            <h2>Server update</h2>
+            <ul id="topic">
+                <li class="announcement">
+                    <h5>Free Horse</h5>
+                    <p>Free horse rank S in Darkwood region<br>
+                        Just kill the golem lvl 90</p>
+                </li>
+                <li class="announcement">
+                    <h5>Tips and Trick</h5>
+                    <p>Here, some trick you need to know to be the best mage!</p>
+                </li>
+                <li class="announcement">
+                    <h5>Need help!</h5>
+                    <p>Someone to help in he dungeon?</p>
+                </li>
+            </ul>
+        </div>
+
 
 
 
