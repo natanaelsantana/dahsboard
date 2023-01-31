@@ -1,3 +1,5 @@
+  @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Sacramento&family=Sedgwick+Ave&family=Solitreo&family=Spectral:wght@300&display=swap');
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -7,39 +9,75 @@ body {
     background: white;
     height: 100vh;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 250px 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas:
         'sidebar header'
         'sidebar content';
 }
 
+ul {
+    list-style: none;
+}
 .header {
     position: relative;
     grid-area: header;
-    background-color: white;
+    background-color: #D1BE9D;
     padding: 1.5rem 3rem;
     z-index: 3;
-    border-radius: 5px;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 
 }
 
-.top {
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    margin-bottom: 2.5rem
+.header .top .picture {
+    background: url(pics/char-icon.png) center center / cover no-repeat;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
 }
+
+.header .top h2 {
+    font-family: 'Lora', serif;
+    font-size: medium;
+    font-style: italic;
+}
+
+.header .top {
+    display: flex;
+    grid-template-columns: 1fr max-content;
+    margin-bottom: 2.5rem;
+    gap: 1vw;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search #search {
+    display: inline-block;
+    border: 0;
+    background-color: white;
+    padding: 1vw;
+    margin-left: 3vw;
+    border-radius: 40px;
+    width: 40vw
+}
+
 
 .sidebar {
     background-color: rgb(93, 204, 93);
     grid-area: sidebar;
     padding: 30px;
+    font-family: 'Sedgwick Ave', cursive;
 }
 
-.options {
+.sidebar .options {
     display: grid;
     gap: 1.5rem;
+}
+
+.option h1 {
+    font-family: 'Spectral', serif;
+    font-weight:300;
+    font-style: italic;
 }
 
 .sidebar ul li {
@@ -51,11 +89,11 @@ body {
 
 .sidebar ul li p {
     cursor: pointer;
-    font-weight: bold;
-    text-shadow: 0 0 5px white;
+    font-weight: 300;
+    text-shadow: 0 0 5px rgb(192, 180, 180);
 }
 
-.secondary-options {
+.sidebar .secondary-options {
     padding-top: 40%;
     display: grid;
     gap: 1.5rem;
@@ -67,7 +105,7 @@ body {
 }
 
 .main {
-    background-color: rgba(238, 234, 234, 0.808);
+    background-color: #D5C8BD;
     display: grid;
     grid-area: content;
     padding: 1vw;
@@ -81,15 +119,34 @@ body {
     padding-top: 3vw;
 }
 
-#character {
+
+
+.main #character {
     grid-area: character-box;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#char {
+.main h4 {
+    font-family: 'Solitreo', cursive;
+    padding: 10px; 
+}
+
+.main .topic h2 {
+    font-family: 'Solitreo', cursive;
+    text-align: center;
+}
+
+.main .friends h2 {
+    font-family: 'Solitreo', cursive;
+    text-align: center;
+}
+
+.main #character #char {
     display: flex;
+    height: 30vw;
+    width: 25vw;
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -102,10 +159,14 @@ body {
 
 }
 
-#char img {
+#character #char img {
     width: 15vw;
     height: 20vw;
 
+}
+
+#char p {
+    text-align: center;
 }
 
 .pet-boxes {
@@ -119,15 +180,11 @@ body {
 
 }
 
-#char p {
-    text-align: center;
-}
-
 .pet-boxes p {
     text-align: center;
 }
 
-.pet-box {
+.pet-boxes .pet-box {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -143,21 +200,21 @@ body {
     height: 10vw;
 }
 
-.status {
+.pet-box .status {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.health-bar {
+.status .health-bar {
     border-radius: 10px;
     background-color: lightgreen;
     margin: 1vw;
     width: 15vw;
 }
 
-.mana-bar {
+#char .status .mana-bar {
     border-radius: 10px;
     background-color: lightblue;
 }
@@ -166,20 +223,20 @@ body {
     grid-area: friends;
 }
 
-.friend-stats {
+.friends .friend-stats {
     display: flex;
     align-items: center;
     gap: 1rem;
     cursor: pointer;
 } 
 
-.friend {
+.friend-stats .friend {
     display: flex;
     flex-direction: column;
     gap: 0.5vw;
 }
 
-.stats {
+.friend .stats {
     display: flex;
 }
 
@@ -190,14 +247,7 @@ body {
     height: 45px;
 }
 
-.top .picture {
-    background: url(pics/char-icon.png) center center / cover no-repeat;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-}
-
-#friends {
+.friends #friends {
     list-style: none;
     background-color: white;
     padding: 2vw;
@@ -209,7 +259,7 @@ body {
     padding-bottom: 50px;
 }
 
-.online-indicator {
+.friend .stats .online-indicator {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -219,7 +269,7 @@ body {
     position: relative;
 }
 
-.online-indicator span.blink {
+.friend .stats .online-indicator span.blink {
     display: block;
     width: 15px;
     height: 15px;
@@ -231,7 +281,7 @@ body {
     animation: blink 2s linear infinite;
 }
 
-.offline-indicator {
+.friend .stats .offline-indicator {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -241,7 +291,7 @@ body {
     position: relative;
 }
 
-.offline-indicator span.blink {
+.friend .stats .offline-indicator span.blink {
     display: block;
     width: 15px;
     height: 15px;
@@ -257,9 +307,9 @@ body {
     grid-area: trending;
 }
 
-#topic {
+.topic #topic {
     background-color: white;
-    padding: 4vw;
+    padding: 1vw;
     border-radius: 0.5rem;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
@@ -267,6 +317,25 @@ body {
 .announcement+.announcement {
     border-top: rgb(150, 141, 141) 1px solid;
 }
+
+.announcement {
+    width: 10vw;
+    padding: 1rem;
+}
+
+.announcement h5 {
+    cursor: pointer;
+    text-decoration:underline;
+    text-align: center;
+}
+
+.announcement p {
+    padding-top: 10px;
+    text-align: justify;
+}
+
+
+
 
 @keyframes blink {
     100% {
